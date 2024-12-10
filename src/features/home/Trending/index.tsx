@@ -64,7 +64,7 @@ export default function Trending({ title }: { title: string }) {
       <h1 className="text-2xl xl:text-left text-center text-site-green font-bold">
         {title}
       </h1>
-      <div className="flex flex-col gap-9 xl:px-7 justify-between shrink-0 xl:overflow-hidden !overflow-y-scroll xl:max-h-[64.125rem]">
+      <div className="flex flex-col gap-9 xl:px-7 justify-between shrink-0 xl:overflow-hidden !overflow-y-scroll xl:max-h-[43.125rem]">
         {trendingData.map((trend, index) => (
           <TrendingCard data={trend} key={index} />
         ))}
