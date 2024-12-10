@@ -72,6 +72,17 @@ body {
 }
 
 ::-webkit-scrollbar {
-  width: 0.05rem;
+  width: 0.5rem;
+}
+
+::-webkit-scrollbar-track {
+  background: #ececec;
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #095143;
+  border-radius: 10px;
 }
 

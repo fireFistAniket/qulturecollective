@@ -7,6 +7,8 @@ import {
   UtensilsCrossed,
 } from "lucide-react";
 import BlogCard from "./BlogCard";
+import Trending from "../Trending";
+import Image from "next/image";
 
 export default function TopBlogs() {
   const tabData = [
@@ -156,14 +158,14 @@ export default function TopBlogs() {
     },
   ];
   return (
-    <div className="flex flex-col xl:max-w-5xl w-full shrink-0">
+    <div className="flex flex-col w-full shrink-0 gap-24">
       <Tabs defaultValue={tabData[0].key} className="px-7 py-10">
-        <TabsList className="grid w-full grid-cols-2 lg:grid-cols-4 place-items-center bg-white gap-4">
+        <TabsList className="grid w-full grid-cols-2 xl:grid-cols-4 place-items-stretch xl:place-items-center justify-center mb-8 bg-white gap-4">
           {tabData.map((tab, index) => (
             <TabsTrigger
               value={tab.key}
               key={index}
-              className="text-[#080808] text-base data-[state=active]:text-site-green data-[state=active]:font-bold border lg:border-0 lg:border-b border-[#d2d2d2] data-[state=active]:border-site-green rounded-none py-2 px-3 inline-flex gap-3 items-center data-[state=active]:shadow-none"
+              className="text-[#080808] text-base data-[state=active]:text-site-green data-[state=active]:font-bold border xl:border-0 xl:border-b border-[#d2d2d2] data-[state=active]:border-site-green rounded-none py-2 px-3 inline-flex gap-3 items-center data-[state=active]:shadow-none truncate"
             >
               {tab.icon}
               <span>{tab.key}</span>
@@ -174,17 +176,23 @@ export default function TopBlogs() {
           <TabsContent
             value={tab.key}
             key={index}
-            className="flex flex-col gap-5"
+            className="flex flex-col xl:flex-row gap-7 xl:justify-between"
           >
-            {tab.value.map((tabDetail, id) => (
-              <BlogCard data={tabDetail} key={id} />
-            ))}
+            <div className="flex flex-col gap-5 xl:max-w-5xl w-full shrink-0">
+              {tab.value.map((tabDetail, id) => (
+                <BlogCard data={tabDetail} key={id} />
+              ))}
+            </div>
+            <div className="flex-col gap-7 flex">
+              <Image src='/extra/ad.png' alt="ad" width={569} height={330} />
+              <Trending title="Trending" />
+            </div>
           </TabsContent>
         ))}
       </Tabs>
       <button
         type="button"
-        className="text-sm lg:text-lg font-medium text-white bg-site-green inline-flex items-center py-1 lg:py-4 px-7 gap-2 self-center"
+        className="text-sm xl:text-lg font-medium text-white bg-site-green inline-flex items-center py-1 xl:py-4 px-7 gap-2 self-center"
       >
         <span>View More</span>
         <MoveUpRight className="w-5 h-5" />

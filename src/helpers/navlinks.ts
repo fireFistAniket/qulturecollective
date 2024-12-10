@@ -17,6 +17,6 @@ export const navlinks: NavLinkType[] = [
   },
   {
     label: "Living the Qulture Way",
-    href: "/gallery",
+    href: "#",
   },
 ];

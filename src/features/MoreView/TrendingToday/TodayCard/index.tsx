@@ -26,7 +26,7 @@ export default function TodayCard({
           alt="cover"
           width={370}
           height={502}
-          className="h-80 lg:h-[31.375rem] object-cover mb-5 lg:mb-9"
+          className="h-80 xl:h-[31.375rem] object-cover mb-5 xl:mb-9"
         />
         <div className="flex justify-between items-start w-full py-2">
           <div className="flex flex-col gap-4">
@@ -39,26 +39,26 @@ export default function TodayCard({
                 alt="icon"
                 width={14}
                 height={14}
-                className="size-3"
+                className="size-3 xl:size-4"
               />
-              <h4 className="text-xs tracking-[0.04em] text-white">{type}</h4>
+              <h4 className="text-xs xl:text-sm font-bold tracking-[0.04em] text-white">{type}</h4>
             </div>
-            <h1 className="text-lg lg:text-2xl font-bold text-site-green">
+            <h1 className="text-lg xl:text-2xl font-bold text-site-green">
               {title}
             </h1>
-            <div className="flex gap-0.5 lg:items-start">
-              <p className="flex gap-1 items-center text-site-black text-sm lg:text-lg tracking-[0.04em] font-bold">
+            <div className="flex gap-0.5 xl:items-start">
+              <p className="flex gap-1 items-center text-site-black text-sm xl:text-lg tracking-[0.04em] font-bold">
                 {rating}{" "}
-                <Star className="w-4 h-4 lg:w-5 lg:h-5 text-[#FBBC04] fill-[#FBBC04]" />
+                <Star className="w-4 h-4 xl:w-5 xl:h-5 text-[#FBBC04] fill-[#FBBC04]" />
               </p>
-              <p className="text-sm lg:text-lg text-[#868686]">
+              <p className="text-sm xl:text-lg text-[#868686]">
                 &#40;{liked}&#41; people like this
               </p>
             </div>
-            <p className="text-sm lg:text-lg text-[#4A3A3A]">{description}</p>
+            <p className="text-sm xl:text-lg text-[#4A3A3A]">{description}</p>
             <Link
               href="/blogdetails"
-              className="text-base lg:text-lg font-bold text-site-green inline-flex items-center gap-2 self-start"
+              className="text-base xl:text-lg font-bold text-site-green inline-flex items-center gap-2 self-start"
             >
               <span>Read more</span>
               <MoveUpRight className="w-5 h-5" />

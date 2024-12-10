@@ -21,14 +21,14 @@ export default function Navbar() {
   };
 
   return (
-    <motion.header className="fixed top-0 z-50 w-full bg-site-green flex lg:justify-center">
-      <div className="lg:container w-full flex py-3 items-center gap-8 xlg:gap-0 justify-between px-4 md:px-6 ">
+    <motion.header className="fixed top-0 z-50 w-full bg-site-green flex xl:justify-center">
+      <div className="xl:container w-full flex py-3 items-center gap-8 xxl:gap-0 justify-between px-4 md:px-6 ">
         <Sheet>
           <SheetTrigger asChild>
             <Button
               variant="ghost"
               size="icon"
-              className="rounded-full lg:hidden"
+              className="rounded-full xl:hidden"
             >
               <AlignLeft className="h-8 w-8 text-[#FEFAE0]" />
               <span className="sr-only">Toggle navigation menu</span>
@@ -37,7 +37,7 @@ export default function Navbar() {
           <SheetTitle className="hidden"></SheetTitle>
           <SheetContent
             side="left"
-            className="lg:hidden bg-site-green flex items-center justify-center"
+            className="xl:hidden bg-site-green flex items-center justify-center"
           >
             <div className="grid gap-14 p-4 place-items-center">
               {navlinks.map((link, index) => (
@@ -64,11 +64,11 @@ export default function Navbar() {
             width={302}
             height={63}
             alt="logo"
-            className="w-[29.6vw] lg:w-[8.8vw]"
+            className="w-[29.6vw] xl:w-[8.8vw]"
           />
           <span className="sr-only">Dominion</span>
         </Link>
-        <nav className="hidden items-center gap-6 lg:flex">
+        <nav className="hidden items-center gap-6 xl:flex">
           {navlinks.map((link, index) => (
             <Link
               href={link.href}
@@ -82,13 +82,13 @@ export default function Navbar() {
             </Link>
           ))}
         </nav>
-        <div className="block lg:hidden"></div>
-        <div className="hidden lg:flex items-center gap-4">
+        <div className="block xl:hidden"></div>
+        <div className="hidden xl:flex items-center gap-4">
           <Link href="">
-            <Facebook className="text-white text-sm" />
+            <Facebook className="text-white fill-white text-sm" />
           </Link>
           <Link href="">
-            <Linkedin className="text-white text-sm" />
+            <Linkedin className="text-white fill-white text-sm" />
           </Link>
           <Link href="">
             <Instagram className="text-white text-sm" />

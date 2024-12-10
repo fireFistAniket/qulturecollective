@@ -1,4 +1,4 @@
-import { footerlinks } from "@/helpers/footerlinks";
+import { navlinks } from "@/helpers/navlinks";
 import { Facebook, Instagram, Linkedin } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
@@ -6,61 +6,40 @@ import Link from "next/link";
 export default function Footer() {
   return (
     <footer className="bg-[#031A15] flex flex-col gap-6 px-11 py-6">
-      <div className="flex flex-col lg:flex-row justify-between gap-16">
+      <div className="flex flex-col xl:flex-row justify-between items-center gap-16">
         <div>
           <Image
             src="/logo.png"
             alt="logo"
             width={320}
             height={102}
-            className="w-[68.5vw] lg:w-[16.66vw]"
+            className="w-[68.5vw] xl:w-[16.66vw]"
           />
         </div>
         <div className="flex flex-col gap-5">
-          <h2 className="text-white text-lg font-bold">Resources</h2>
-          <ul className="flex flex-col gap-5">
-            {footerlinks.map((link, index) => (
+          <ul className="flex flex-col xl:flex-row gap-5">
+            {navlinks.map((link, index) => (
               <li className="text-lg text-[#ffe8d4]" key={index}>
-                {link.label}
+                <Link href={link.href}>{link.label}</Link>
               </li>
             ))}
           </ul>
         </div>
-        <div className="flex flex-col gap-5">
-          <h2 className="text-white text-lg font-bold">Resources</h2>
-          <ul className="flex flex-col gap-5">
-            {footerlinks.map((link, index) => (
-              <li className="text-lg text-[#ffe8d4]" key={index}>
-                {link.label}
-              </li>
-            ))}
-          </ul>
-        </div>
-        <div className="flex flex-col gap-5">
-          <h2 className="text-white text-lg font-bold">Resources</h2>
-          <ul className="flex flex-col gap-5">
-            {footerlinks.map((link, index) => (
-              <li className="text-lg text-[#ffe8d4]" key={index}>
-                {link.label}
-              </li>
-            ))}
-          </ul>
-        </div>
-      </div>
-      <div className="w-full h-0.5 bg-[#c5c5c5]"></div>
-      <div className="flex flex-col lg:flex-row-reverse justify-between items-center gap-3">
         <div className="flex items-center gap-4">
           <Link href="">
-            <Facebook className="text-white text-sm" />
+            <Facebook className="text-white fill-white text-sm" />
           </Link>
           <Link href="">
-            <Linkedin className="text-white text-sm" />
+            <Linkedin className="text-white fill-white text-sm" />
           </Link>
           <Link href="">
             <Instagram className="text-white text-sm" />
           </Link>
         </div>
-        <div className="flex flex-col lg:flex-row gap-4">
+      </div>
+      <div className="w-full h-0.5 bg-[#c5c5c5]"></div>
+      <div className="flex flex-col xl:flex-row-reverse justify-center items-center gap-3">
+        <div className="flex flex-col xl:flex-row gap-4">
           <h1 className="text-white text-base text-center">
             2024 Logo Inc. All Rights reserved
           </h1>

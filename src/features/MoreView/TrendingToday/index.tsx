@@ -64,15 +64,15 @@ export default function TrendingToday() {
     },
   ];
   return (
-    <section className="flex flex-col gap-4 pt-[15%] mb-10 lg:pl-28">
-      <h1 className="text-2xl lg:text-6xl leading-[5rem] font-bold text-site-green capitalize text-center lg:text-left lg:inline-flex items-center gap-3">
+    <section className="flex flex-col gap-4 pt-[15%] xl:pt-[10%] mb-10 xl:pl-28">
+      <h1 className="text-2xl xl:text-6xl leading-[5rem] font-bold text-site-green capitalize text-center xl:text-left xl:inline-flex items-center gap-3">
         trending today in vietnam{" "}
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width={90}
           height={109}
           fill="none"
-          className="hidden lg:inline"
+          className="hidden xl:inline"
         >
           <path
             fill="#095143"
@@ -105,13 +105,13 @@ export default function TrendingToday() {
           align: "start",
           loop: true,
         }}
-        className="w-full lg:mt-20 pl-7 lg:pl-0"
+        className="w-full xl:mt-20 pl-7 xl:pl-0"
       >
-        <CarouselContent className="gap-9 lg:gap-16">
+        <CarouselContent className="">
           {todays.map((deal, index) => (
             <CarouselItem
               key={index}
-              className="basis-4/5 md:basis-1/2 lg:basis-1/4"
+              className="basis-4/5 md:basis-1/2 xl:basis-1/4 mr-9 xl:mr-16"
             >
               <TodayCard data={deal} />
             </CarouselItem>

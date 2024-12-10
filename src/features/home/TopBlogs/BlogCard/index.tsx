@@ -14,26 +14,26 @@ export default function BlogCard({
   };
 }) {
   return (
-    <Card className="border-[#d2d2d2] py-3 px-4 rounded-none shadow-none">
+    <Card className="border-[#d2d2d2] py-3 px-4 xl:py-7 xl:px-8 rounded-none shadow-none">
       <CardContent className="p-0">
-        <div className="flex gap-5 lg:gap-6">
+        <div className="flex gap-5 xl:gap-6">
           <div className="flex self-stretch flex-shrink-0">
             <Image
               src={data.cover}
               alt="trending cover"
               width={182}
               height={164}
-              className="w-[26.7vw] lg:w-[14.8vw] object-cover"
+              className="w-[26.7vw] xl:w-[14.8vw] object-cover"
             />
           </div>
-          <div className="flex flex-col gap-2 lg:gap-3">
-            <h1 className="text-site-black text-sm lg:text-3xl font-semibold">
+          <div className="flex flex-col gap-2 xl:gap-3">
+            <h1 className="text-site-black text-sm xl:text-3xl font-semibold">
               {data.title}
             </h1>
-            <p className="text-site-black font-light text-xs lg:text-xl">
+            <p className="text-site-black font-light text-xs xl:text-xl">
               {data.desc}
             </p>
-            <p className="text-xs lg:text-xl text-site-black">
+            <p className="text-xs xl:text-xl text-site-black">
               by <span className="underline font-semibold">{data.author}</span>
             </p>
             <div className="flex gap-1">
@@ -44,7 +44,7 @@ export default function BlogCard({
                 />
               ))}
             </div>
-            <p className="text-site-black text-xs lg:text-xl font-light">
+            <p className="text-site-black text-xs xl:text-xl font-light">
               Published {data.publish}
             </p>
           </div>
