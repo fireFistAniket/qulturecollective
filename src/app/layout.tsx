@@ -15,20 +15,32 @@ export const metadata: Metadata = {
   description: "Qulture Collective made by Appifinty.",
   icons: {
     icon: [
-      { url: "/favicon.svg", type: "image/svg+xml" },
-      { url: "/favicon-96x96.png", type: "image/png", sizes: "96x96" },
+      {
+        url: "http://qulturecollective.vercel.app/favicon.svg",
+        type: "image/svg+xml",
+      },
+      {
+        url: "http://qulturecollective.vercel.app/favicon-96x96.png",
+        type: "image/png",
+        sizes: "96x96",
+      },
     ],
-    shortcut: "/favicon.ico",
-    apple: [{ url: "/apple-touch-icon.png", sizes: "180x180" }],
+    shortcut: "http://qulturecollective.vercel.app/favicon.ico",
+    apple: [
+      {
+        url: "http://qulturecollective.vercel.app/apple-touch-icon.png",
+        sizes: "180x180",
+      },
+    ],
   },
-  manifest: "/site.webmanifest",
+  manifest: "http://qulturecollective.vercel.app/site.webmanifest",
   openGraph: {
     title: "Qulture Collective",
     description: "Qulture Collective made by Appifinty.",
     type: "website",
     images: [
       {
-        url: "/favicon-96x96.png",
+        url: "http://qulturecollective.vercel.app/favicon-96x96.png",
         width: 96,
         height: 96,
       },

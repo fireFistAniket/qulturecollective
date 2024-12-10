@@ -41,7 +41,7 @@ export default async function BlogDetails() {
   ];
   return (
     <>
-      <section className="flex flex-col xl:flex-row items-center xl:items-stretch justify-center xl:px-28 xl:py-24 pt-[15%] xl:pt-[10%]">
+      <section className="flex flex-col xl:flex-row items-center xl:items-stretch justify-center xl:px-28 py-[25%] xl:py-[15%]">
         <div className="flex flex-col gap-8 px-4 xl:max-w-5xl">
           <Image
             src="/blogs/blog-cover.png"
@@ -157,7 +157,7 @@ export default async function BlogDetails() {
           </div>
         </div>
         <div className="hidden xl:flex flex-col gap-9">
-        <Image src='/extra/ad.png' alt="ad" width={569} height={330} />
+          <Image src="/extra/ad.png" alt="ad" width={569} height={330} />
           <Trending title="Similar like this" />
         </div>
       </section>

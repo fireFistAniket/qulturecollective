@@ -64,7 +64,7 @@ export default function TrendingToday() {
     },
   ];
   return (
-    <section className="flex flex-col gap-4 pt-[15%] xl:pt-[10%] mb-10 xl:pl-28">
+    <section className="flex flex-col gap-4 py-[25%] xl:py-[15%] mb-10 xl:pl-28">
       <h1 className="text-2xl xl:text-6xl leading-[5rem] font-bold text-site-green capitalize text-center xl:text-left xl:inline-flex items-center gap-3">
         trending today in vietnam{" "}
         <svg
