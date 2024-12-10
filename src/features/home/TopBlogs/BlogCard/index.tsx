@@ -1,6 +1,8 @@
+"use client";
 import { Card, CardContent } from "@/components/ui/card";
 import { Star } from "lucide-react";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 
 export default function BlogCard({
   data,
@@ -13,8 +15,12 @@ export default function BlogCard({
     cover: string;
   };
 }) {
+  const router = useRouter();
   return (
-    <Card className="border-[#d2d2d2] py-3 px-4 xl:py-7 xl:px-8 rounded-none shadow-none">
+    <Card
+      className="border-[#d2d2d2] py-3 px-4 xl:py-7 xl:px-8 rounded-none shadow-none cursor-pointer"
+      onClick={() => router.push("/blogdetails")}
+    >
       <CardContent className="p-0">
         <div className="flex gap-5 xl:gap-6">
           <div className="flex self-stretch flex-shrink-0">

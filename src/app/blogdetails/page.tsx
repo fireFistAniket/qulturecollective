@@ -41,7 +41,7 @@ export default async function BlogDetails() {
   ];
   return (
     <>
-      <section className="flex flex-col xl:flex-row items-center xl:items-stretch justify-center xl:px-28 xl:py-24 pt-20 xl:pt-24">
+      <section className="flex flex-col xl:flex-row items-center xl:items-stretch justify-center xl:px-28 xl:py-24 pt-[15%] xl:pt-[10%]">
         <div className="flex flex-col gap-8 px-4 xl:max-w-5xl">
           <Image
             src="/blogs/blog-cover.png"

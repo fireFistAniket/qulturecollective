@@ -15,7 +15,7 @@ export default async function MoreView() {
     <div className={opensans.className}>
       <TrendingToday />
       <PoppularFoods />
-      <section className="flex flex-col xl:flex-row items-center xl:items-stretch justify-center xl:px-28 xl:py-24">
+      <section className="flex flex-col xl:flex-row items-center xl:items-start justify-center xl:px-28 xl:py-24">
         <FeatureBlog />
         <Trending title="Related Post" />
       </section>

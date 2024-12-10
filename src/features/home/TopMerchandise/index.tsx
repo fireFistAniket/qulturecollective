@@ -58,11 +58,11 @@ export default function TopMerchandise() {
             loop: true,
           }}
         >
-          <CarouselContent className="-ml-1 gap-6">
+          <CarouselContent className="-ml-1">
             {merchandises.map((merchandise, index) => (
               <CarouselItem
                 key={index}
-                className="p-1 basis-3/4 md:basis-1/2 xl:basis-1/4"
+                className="p-1 mr-6 basis-3/4 md:basis-1/2 xl:basis-1/4"
               >
                 <MerchandiseCard data={merchandise} />
               </CarouselItem>

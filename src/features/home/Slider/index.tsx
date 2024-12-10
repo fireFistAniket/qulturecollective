@@ -64,13 +64,13 @@ export default function Slider() {
           <div className="flex flex-1 items-center border border-white pe-1">
             <Input
               placeholder="Search latest news about travel, business.."
-              className="rounded-none outline-none border-none xl:max-w-2xl w-full placeholder:text-white text-white xl:w-96 text-xs xl:text-base flex-1"
+              className="rounded-none outline-none border-none xl:max-w-2xl w-full placeholder:text-white text-white xl:w-96 text-xs xl:text-base flex-1 xl:py-6"
             />
             <Search className="text-white text-sm" />
           </div>
           <div className="flex flex-1 max-w-80">
             <Select>
-              <SelectTrigger className="text-white rounded-none text-xs xl:text-base">
+              <SelectTrigger className="text-white rounded-none text-xs xl:text-base xl:py-6">
                 <SelectValue placeholder="Location" />
               </SelectTrigger>
               <SelectContent>

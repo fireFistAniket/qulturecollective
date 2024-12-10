@@ -23,8 +23,8 @@ export const metadata: Metadata = {
   },
   manifest: "/site.webmanifest",
   openGraph: {
-    title: "Dominion",
-    description: "Dominion made by Appifinty.",
+    title: "Qulture Collective",
+    description: "Qulture Collective made by Appifinty.",
     type: "website",
     images: [
       {

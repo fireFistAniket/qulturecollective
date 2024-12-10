@@ -19,7 +19,7 @@ export default function Footer() {
         <div className="flex flex-col gap-5">
           <ul className="flex flex-col xl:flex-row gap-5">
             {navlinks.map((link, index) => (
-              <li className="text-lg text-[#ffe8d4]" key={index}>
+              <li className="text-lg text-white" key={index}>
                 <Link href={link.href}>{link.label}</Link>
               </li>
             ))}
