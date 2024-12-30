@@ -49,11 +49,11 @@ export default function PoppularFoods() {
           }}
           className="w-full xl:mt-20 pl-7 xl:pl-0"
         >
-          <CarouselContent className="gap-9 xl:gap-16">
+          <CarouselContent className="">
             {foods.map((food, index) => (
               <CarouselItem
                 key={index}
-                className="basis-4/5 md:basis-1/2 xl:basis-1/4"
+                className="basis-4/5 md:basis-1/2 xl:basis-1/3 mr-9"
               >
                 <FoodCard data={food} />
               </CarouselItem>

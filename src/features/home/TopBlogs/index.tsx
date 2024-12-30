@@ -178,7 +178,7 @@ export default function TopBlogs() {
             key={index}
             className="flex flex-col xl:flex-row gap-7 xl:justify-between"
           >
-            <div className="flex flex-col gap-5 xl:max-w-5xl w-full shrink-0">
+            <div className="flex flex-col gap-5 lg:max-w-3xl xxl:max-w-4xl w-full shrink-0">
               {tab.value.map((tabDetail, id) => (
                 <BlogCard data={tabDetail} key={id} />
               ))}

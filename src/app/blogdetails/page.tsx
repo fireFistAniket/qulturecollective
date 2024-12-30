@@ -12,6 +12,7 @@ import {
 import Image from "next/image";
 
 export default async function BlogDetails() {
+
   const qultureRating = [
     {
       title: "ambiance",
@@ -42,7 +43,7 @@ export default async function BlogDetails() {
   return (
     <>
       <section className="flex flex-col xl:flex-row items-center xl:items-stretch justify-center xl:px-28 py-[25%] xl:py-[15%]">
-        <div className="flex flex-col gap-8 px-4 xl:max-w-5xl">
+        <div className="flex flex-col gap-8 px-4 xl:max-w-4xl">
           <Image
             src="/blogs/blog-cover.png"
             alt="blog cover"

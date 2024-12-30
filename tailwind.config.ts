@@ -63,6 +63,9 @@ export default {
       fontFamily: {
         oxygen: "var(--font-oxygen-sans)",
       },
+      screens: {
+        xxl: "1440px",
+      },
     },
   },
   plugins: [require("tailwindcss-animate")],

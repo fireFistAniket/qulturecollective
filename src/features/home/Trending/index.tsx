@@ -60,7 +60,7 @@ export default function Trending({ title }: { title: string }) {
     },
   ];
   return (
-    <div className="flex flex-col gap-10 py-10 xl:border xl:border-[#d2d2d2] xl:px-6 max-w-xl w-full">
+    <div className="flex flex-col gap-10 py-10 xl:border xl:border-[#d2d2d2] xl:px-6 xxl:max-w-xl w-full">
       <h1 className="text-2xl xl:text-left text-center text-site-green font-bold">
         {title}
       </h1>
