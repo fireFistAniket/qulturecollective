@@ -13,7 +13,7 @@ import Image from "next/image";
 export default function TopBlogs() {
   const tabData = [
     {
-      key: "Top Destination",
+      key: "Qulture Journeys",
       icon: <Luggage className="w-5 h-8" />,
       value: [
         {
@@ -49,7 +49,7 @@ export default function TopBlogs() {
       ],
     },
     {
-      key: "Food & Drinks",
+      key: "Qulture Eats",
       icon: <UtensilsCrossed className="w-5 h-8" />,
       value: [
         {
@@ -85,7 +85,7 @@ export default function TopBlogs() {
       ],
     },
     {
-      key: "Activities & experiences",
+      key: "Qulture Insights",
       icon: <Medal className="w-5 h-8" />,
       value: [
         {
@@ -121,7 +121,7 @@ export default function TopBlogs() {
       ],
     },
     {
-      key: "Travel Tips",
+      key: "Living the Qulture Way",
       icon: <MapPin className="w-5 h-8" />,
       value: [
         {
