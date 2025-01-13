@@ -1,4 +1,4 @@
-import { Star } from "lucide-react";
+// import { Star } from "lucide-react";
 
 export default function Comments() {
   return (
@@ -6,7 +6,7 @@ export default function Comments() {
       <h1 className="text-base xl:text-5xl font-semibold text-[#1f1f1f] italic">
         Comments and Ratings
       </h1>
-      <div className="flex flex-col p-4 bg-[#F6F6F6] rounded-lg gap-3 xl:gap-6">
+      {/* <div className="flex flex-col p-4 bg-[#F6F6F6] rounded-lg gap-3 xl:gap-6">
         <h1 className="text-[#010101] text-sm xl:text-3xl font-semibold">
           Rate this content
         </h1>
@@ -31,7 +31,7 @@ export default function Comments() {
             Submit
           </button>
         </div>
-      </div>
+      </div> */}
     </section>
   );
 }

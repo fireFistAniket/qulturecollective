@@ -1,12 +1,13 @@
-import NewsLetter from "@/features/global/NewsLetter";
+// import NewsLetter from "@/features/global/NewsLetter";
 import AffilateProgram from "@/features/home/AffilateProgram";
 import CompanyWeek from "@/features/home/CompanyWeek";
 import FantasticDeals from "@/features/home/FantasticDeals";
 import Slider from "@/features/home/Slider";
-import TopBlogs from "@/features/home/TopBlogs";
 import TopMerchandise from "@/features/home/TopMerchandise";
 import TrendingEbooks from "@/features/home/TrendingEbooks";
+import dynamic from "next/dynamic";
 
+const TopBlogs = dynamic(() => import("@/features/home/TopBlogs"));
 export default async function Home() {
   return (
     <>
@@ -19,7 +20,7 @@ export default async function Home() {
       <AffilateProgram />
       <CompanyWeek />
       <FantasticDeals />
-      <NewsLetter />
+      {/* <NewsLetter /> */}
     </>
   );
 }

@@ -13,7 +13,7 @@ export default function Footer() {
             alt="logo"
             width={320}
             height={102}
-            className="w-[68.5vw] xl:w-[16.66vw]"
+            className="w-[68.5vw] xl:w-[14vw]"
           />
         </div>
         <div className="flex flex-col gap-5">

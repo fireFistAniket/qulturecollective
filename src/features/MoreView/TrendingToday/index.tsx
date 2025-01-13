@@ -1,68 +1,38 @@
+"use client";
 import {
   Carousel,
   CarouselContent,
   CarouselItem,
 } from "@/components/ui/carousel";
 import TodayCard from "./TodayCard";
+import { useEffect, useState } from "react";
+import { fetchAllBlogs } from "@/actions/fetchdata";
 
 export default function TrendingToday() {
-  const todays = [
-    {
-      cover: "/trending/today/trending-cover-1.png",
-      title: "Hanoi: The Cultural Capital",
-      offer: "28%",
-      description: "Over 14.5k happy users all over the world",
-      rating: "4.8",
-      liked: "27,000",
-      type: "Travel",
-      typeIcon: "/extra/aeroplane-icon.png",
-      bg: "linear-gradient(100.3deg, #4285F4 -8.19%, #31548D 192.73%)",
-    },
-    {
-      cover: "/trending/today/trending-cover-2.png",
-      title: "Halong Bay: A Natural Wonder",
-      offer: "25%",
-      description: "Over 14.5k happy users all over the world",
-      rating: "5.0",
-      liked: "27,000",
-      type: "Culture",
-      typeIcon: "/extra/culture-icon.png",
-      bg: "linear-gradient(104.59deg, #F25C62 15.65%, #8C3539 165.18%)",
-    },
-    {
-      cover: "/trending/today/trending-cover-3.png",
-      title: "Hoi An: A Slice of History",
-      offer: "30%",
-      description: "Over 14.5k happy users all over the world",
-      rating: "5.0",
-      liked: "27,000",
-      type: "Culture",
-      typeIcon: "/extra/culture-icon.png",
-      bg: "linear-gradient(104.59deg, #F25C62 15.65%, #8C3539 165.18%)",
-    },
-    {
-      cover: "/deals/deals-cover-4.png",
-      title: "Hoi An: A Slice of History",
-      offer: "32%",
-      description: "Over 14.5k happy users all over the world",
-      rating: "4.2",
-      liked: "27,000",
-      type: "Culture",
-      typeIcon: "/extra/culture-icon.png",
-      bg: "linear-gradient(104.59deg, #F25C62 15.65%, #8C3539 165.18%)",
-    },
-    {
-      cover: "/trending/today/trending-cover-5.jpg",
-      title: "Ho Chi Minh City: A Dynamic Metropolis",
-      offer: "32%",
-      description: "Over 14.5k happy users all over the world",
-      rating: "4.8",
-      liked: "27,000",
-      type: "Travel",
-      typeIcon: "/extra/aeroplane-icon.png",
-      bg: "linear-gradient(100.3deg, #4285F4 -8.19%, #31548D 192.73%)",
-    },
-  ];
+  const [trending, setTrending] = useState([]);
+  async function fetchTrending() {
+    const trendingBlogs = await fetchAllBlogs();
+    setTrending(() =>
+      trendingBlogs.data.map((item: any) => ({
+        title: item.attributes.title,
+        author: item.attributes.uploadedBy,
+        publish: new Date(item.attributes.uploadedAt).toDateString(),
+        rating: item.attributes.overall_rating,
+        cover: `${process.env.NEXT_PUBLIC_STRIPE_API_URI}${item.attributes.cover.data.attributes.url}`,
+        description: item.attributes.description.slice(0, 114),
+        liked: item.attributes.liked,
+        type: item.attributes.blog_tags,
+        typeIcon: "/extra/aeroplane-icon.png",
+        bg: "linear-gradient(100.3deg, #4285F4 -8.19%, #31548D 192.73%)",
+        id: item.id,
+      }))
+    );
+  }
+
+  useEffect(() => {
+    fetchTrending();
+  }, []);
+
   return (
     <section className="flex flex-col gap-4 py-[25%] xl:py-[15%] mb-10 xl:pl-28">
       <h1 className="text-2xl xl:text-6xl leading-[5rem] font-bold text-site-green capitalize text-center xl:text-left xl:inline-flex items-center gap-3">
@@ -108,7 +78,7 @@ export default function TrendingToday() {
         className="w-full xl:mt-20 pl-7 xl:pl-0"
       >
         <CarouselContent className="">
-          {todays.map((deal, index) => (
+          {trending.map((deal, index) => (
             <CarouselItem
               key={index}
               className="basis-4/5 md:basis-1/2 xl:basis-1/4 mr-9 xl:mr-16"

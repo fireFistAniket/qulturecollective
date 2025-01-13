@@ -13,13 +13,14 @@ export default function BlogCard({
     publish: string;
     desc: string;
     cover: string;
+    id: string;
   };
 }) {
   const router = useRouter();
   return (
     <Card
       className="border-[#d2d2d2] py-3 px-4 xl:py-7 xl:px-8 rounded-none shadow-none cursor-pointer"
-      onClick={() => router.push("/blogdetails")}
+      onClick={() => router.push(`/blogdetails/${data.id}`)}
     >
       <CardContent className="p-0">
         <div className="flex gap-5 xl:gap-6">

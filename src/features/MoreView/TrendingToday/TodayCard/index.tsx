@@ -15,9 +15,11 @@ export default function TodayCard({
     type: string;
     typeIcon: string;
     bg: string;
+    id: string;
   };
 }) {
-  const { cover, title, description, rating, liked, type, typeIcon, bg } = data;
+  const { cover, title, description, rating, liked, type, typeIcon, bg, id } =
+    data;
   return (
     <Card className="border-0 shadow-none">
       <CardContent className="relative p-0 border-0">
@@ -26,7 +28,7 @@ export default function TodayCard({
           alt="cover"
           width={370}
           height={502}
-          className="h-80 xl:h-[31.375rem] object-cover mb-5 xl:mb-9"
+          className="h-80 xl:h-[31.375rem] object-cover mb-5 xl:mb-9 w-full"
         />
         <div className="flex justify-between items-start w-full py-2">
           <div className="flex flex-col gap-4">
@@ -41,9 +43,11 @@ export default function TodayCard({
                 height={14}
                 className="size-3 xl:size-4"
               />
-              <h4 className="text-xs xl:text-sm font-bold tracking-[0.04em] text-white">{type}</h4>
+              <h4 className="text-xs xl:text-sm font-bold tracking-[0.04em] text-white">
+                {type}
+              </h4>
             </div>
-            <h1 className="text-lg xl:text-2xl font-bold text-site-green">
+            <h1 className="text-lg xl:text-2xl font-bold text-site-green line-clamp-1">
               {title}
             </h1>
             <div className="flex gap-0.5 xl:items-start">
@@ -55,9 +59,12 @@ export default function TodayCard({
                 &#40;{liked}&#41; people like this
               </p>
             </div>
-            <p className="text-sm xl:text-lg text-[#4A3A3A]">{description}</p>
+            <p
+              className="text-sm xl:text-lg text-[#4A3A3A] line-clamp-3"
+              dangerouslySetInnerHTML={{ __html: description }}
+            ></p>
             <Link
-              href="/blogdetails"
+              href={`/blogdetails/${id}`}
               className="text-base xl:text-lg font-bold text-site-green inline-flex items-center gap-2 self-start"
             >
               <span>Read more</span>
