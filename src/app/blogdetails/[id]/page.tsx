@@ -3,9 +3,7 @@ import Comments from "@/features/blogdetails/Commemts";
 import CommentList from "@/features/blogdetails/CommentList";
 import Trending from "@/features/home/Trending";
 import {
-  MapPinned,
   Share,
-  Soup,
   Star,
   ThumbsDown,
   ThumbsUp,

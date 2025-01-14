@@ -1,5 +1,5 @@
 "use client";
-import { fetchSingleBlog } from "@/actions/fetchdata";
+import { fetchTagBaseBlog } from "@/actions/fetchdata";
 import { MoveUpRight, Star } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
@@ -7,17 +7,19 @@ import { useEffect, useState } from "react";
 
 export default function FeatureBlog({
   ref,
+  category,
 }: {
   ref: React.RefObject<HTMLDivElement | null>;
+  category: string;
 }) {
   const [featureBlog, setFeatureBlog] = useState<any>({});
   const [featureBlogId, setFeatureBlogId] = useState<number>(0);
 
   async function getFeatureblog() {
     try {
-      const blog = await fetchSingleBlog(9);
-      setFeatureBlog(blog.data.attributes);
-      setFeatureBlogId(blog.data.id);
+      const blog = await fetchTagBaseBlog(category);
+      setFeatureBlog(blog.data[0].attributes);
+      setFeatureBlogId(blog.data[0].id);
     } catch (error) {
       console.error(error);
     }
