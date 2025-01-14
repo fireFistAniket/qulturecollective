@@ -23,7 +23,7 @@ export default function TrendingCard({
               alt="trending cover"
               width={182}
               height={164}
-              className="h-36 xl:h-40 object-cover w-28 xl:w-44"
+              className="h-36 xl:h-40 object-cover w-28 xl:w-[9.5vmax]"
             />
           </div>
           <div className="flex flex-col gap-2">

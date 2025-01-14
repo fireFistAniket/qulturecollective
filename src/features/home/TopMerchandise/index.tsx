@@ -42,7 +42,7 @@ export default function TopMerchandise() {
     },
   ];
   return (
-    <section className="flex flex-col gap-8">
+    <section className="flex flex-col gap-8 py-4 md:py-8 xl:py-16">
       <div className="flex flex-col gap-2">
         <h2 className="text-site-green tracking-[0.2em] text-lg xl:text-3xl text-center">
           Top Picked

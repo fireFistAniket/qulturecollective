@@ -100,7 +100,7 @@ export default function TopBlogs() {
         defaultValue={tabData[0]?.key || "Qulture Journeys"}
         className="px-2 md:px-4 xl:px-7 py-4 md:py-7 xl:py-10"
       >
-        <TabsList className="grid w-full grid-cols-2 xl:grid-cols-4 place-items-stretch xl:place-items-center justify-center mb-8 bg-white gap-4">
+        <TabsList className="grid w-full grid-cols-2 xl:grid-cols-4 place-items-stretch justify-center mb-8 bg-white gap-4">
           {tabData.map((tab, index) => (
             <TabsTrigger
               value={tab.key}
@@ -119,7 +119,7 @@ export default function TopBlogs() {
             className="flex flex-col xl:flex-row gap-7 xl:justify-between"
           >
             <div
-              className="flex flex-col gap-5 lg:max-w-3xl xxl:max-w-5xl w-full shrink-0"
+              className="flex flex-col gap-5 lg:max-w-3xl xxl:max-w-4xl w-full shrink-0"
               ref={blogListsRef}
             >
               {tab.value.map((tabDetail, id) => (

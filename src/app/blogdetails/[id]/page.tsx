@@ -2,18 +2,13 @@ import { fetchSingleBlog } from "@/actions/fetchdata";
 import Comments from "@/features/blogdetails/Commemts";
 import CommentList from "@/features/blogdetails/CommentList";
 import Trending from "@/features/home/Trending";
-import {
-  Share,
-  Star,
-  ThumbsDown,
-  ThumbsUp,
-} from "lucide-react";
+import { Share, Star, ThumbsDown, ThumbsUp } from "lucide-react";
 import Image from "next/image";
 
 export default async function BlogDetails({
   params,
 }: {
-  params: Promise<{ id: string | number }>;
+  params: Promise<{ id: string }>;
 }) {
   const id = (await params).id;
   const blogDetails = await fetchSingleBlog(id);
@@ -190,8 +185,10 @@ export default async function BlogDetails({
           <Trending title="Similar like this" />
         </div>
       </section>
-      <Comments />
-      <CommentList />
+      <Comments blogId={id} />
+      <CommentList
+        comments={blogDetails.data.attributes.qulture_collective_comments}
+      />
     </>
   );
 }
