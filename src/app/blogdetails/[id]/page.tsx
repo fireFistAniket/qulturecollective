@@ -79,12 +79,12 @@ export default async function BlogDetails({
               ),
             }}
           />
-          {blogDetails.data.attributes.tip && (
+          {blogDetails.data?.attributes?.tip && (
             <div className="flex bg-[#FF89291A] rounded-md overflow-hidden">
               <div className="w-4 bg-[#FF8929]"></div>
               <div className="text-[#525252] text-xs xl:text-3xl tracking-[0.02em] py-3 px-5 xl:py-7 xl:px-14">
                 <span className="font-bold">Pro Tip:</span>{" "}
-                {blogDetails.data.attributes.tip}
+                {blogDetails.data?.attributes?.tip}
               </div>
             </div>
           )}
@@ -186,9 +186,11 @@ export default async function BlogDetails({
         </div>
       </section>
       <Comments blogId={id} />
-      <CommentList
-        comments={blogDetails.data.attributes.qulture_collective_comments}
-      />
+      {blogDetails.data?.attributes?.qulture_collective_comments && (
+        <CommentList
+          comments={blogDetails.data?.attributes?.qulture_collective_comments}
+        />
+      )}
     </>
   );
 }
