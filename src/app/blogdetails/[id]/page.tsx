@@ -12,6 +12,18 @@ export default async function BlogDetails({
 }) {
   const id = (await params).id;
   const blogDetails = await fetchSingleBlog(id);
+  const convertMarkdownToHtml = (text: string) => {
+    // Convert markdown links [text](url) to <a> tags
+    const formattedText = text
+      .replace(
+        /\[([^\]]+)\]\((https?:\/\/[^\)]+)\)/g,
+        '<a href="$2" target="_blank" rel="noopener noreferrer" style="color: #2563eb; text-decoration: underline;">$1</a>'
+      )
+      // Replace newline characters with <br/> for line breaks
+      .replace(/\n/g, "<br/>");
+
+    return formattedText;
+  };
 
   return (
     <>
@@ -73,9 +85,8 @@ export default async function BlogDetails({
           <div
             className="text-base text-[#464646] xl:text-2xl xl:leading-[2.75rem]"
             dangerouslySetInnerHTML={{
-              __html: blogDetails.data.attributes.description.replace(
-                /\n/g,
-                "<br/>"
+              __html: convertMarkdownToHtml(
+                blogDetails.data.attributes.description
               ),
             }}
           />
