@@ -59,7 +59,7 @@ export default function Slider() {
       className="flex flex-col bg-cover bg-no-repeat"
       style={{ backgroundImage: `url('${carouselImg[current - 1]}')` }}
     >
-      <div className="bg-[linear-gradient(0deg,_rgba(0,_0,_0,_0.7),_rgba(0,_0,_0,_0.7))] flex flex-col gap-10 py-[25%] xl:py-[15%]">
+      <div className="bg-[linear-gradient(0deg,_rgba(0,_0,_0,_0.7),_rgba(0,_0,_0,_0.7))] flex flex-col gap-10 py-[25%] xl:py-[10%]">
         <div className="flex gap-4 mx-7 xl:self-end xl:flex-row-reverse xl:max-w-5xl xl:w-full">
           <div className="flex flex-1 items-center border border-white pe-1">
             <Input

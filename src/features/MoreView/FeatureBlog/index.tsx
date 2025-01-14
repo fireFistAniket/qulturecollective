@@ -29,7 +29,7 @@ export default function FeatureBlog({
 
   return (
     <div
-      className="flex flex-col border border-[#D2D2D2] gap-4 xl:gap-8 xl:py-7 xl:px-8 px-4 py-3 xl:my-0 xl:mx-8 mx-4 my-3 h-full flex-1"
+      className="flex flex-col border border-[#D2D2D2] gap-4 xl:gap-8 xl:py-7 xl:px-8 px-4 py-3 xl:my-0 xl:mx-8 mx-4 my-3 h-full grow"
       ref={ref}
     >
       <Image

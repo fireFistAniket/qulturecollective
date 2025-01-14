@@ -6,12 +6,12 @@ import {
 } from "@/components/ui/carousel";
 import TodayCard from "./TodayCard";
 import { useEffect, useState } from "react";
-import { fetchAllBlogs } from "@/actions/fetchdata";
+import { fetchTagBaseBlog } from "@/actions/fetchdata";
 
-export default function TrendingToday() {
+export default function TrendingToday({ category }: { category: string }) {
   const [trending, setTrending] = useState([]);
   async function fetchTrending() {
-    const trendingBlogs = await fetchAllBlogs();
+    const trendingBlogs = await fetchTagBaseBlog(category);
     setTrending(() =>
       trendingBlogs.data.map((item: any) => ({
         title: item.attributes.title,
@@ -33,10 +33,19 @@ export default function TrendingToday() {
     fetchTrending();
   }, []);
 
+  const title =
+    category === "food"
+      ? "Popular Foods"
+      : category === "travel"
+      ? "Top Destinations"
+      : category === "insights"
+      ? "Top Stories"
+      : "Travel-Inspired DIYs";
+
   return (
-    <section className="flex flex-col gap-4 py-[25%] xl:py-[15%] mb-10 xl:pl-28">
+    <section className="flex flex-col gap-4 py-[25%] xl:py-[8%] mb-10 xl:pl-28">
       <h1 className="text-2xl xl:text-6xl leading-[5rem] font-bold text-site-green capitalize text-center xl:text-left xl:inline-flex items-center gap-3">
-        trending today in vietnam{" "}
+        {title}{" "}
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width={90}

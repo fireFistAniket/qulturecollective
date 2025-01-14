@@ -43,7 +43,7 @@ export default function TodayCard({
                 height={14}
                 className="size-3 xl:size-4"
               />
-              <h4 className="text-xs xl:text-sm font-bold tracking-[0.04em] text-white">
+              <h4 className="text-xs xl:text-sm font-bold tracking-[0.04em] text-white capitalize">
                 {type}
               </h4>
             </div>

@@ -22,8 +22,8 @@ export default async function BlogDetails({
 
   return (
     <>
-      <section className="flex flex-col xl:flex-row items-center xl:items-stretch justify-center xl:px-28 py-[25%] xl:py-[15%]">
-        <div className="flex flex-col gap-8 px-4 xl:max-w-4xl">
+      <section className="flex flex-col xl:flex-row items-center xl:items-stretch justify-center xl:px-28 py-[25%] xl:py-[10%]">
+        <div className="flex flex-col gap-8 px-4 xl:max-w-6xl w-full">
           <Image
             src={`${process.env.NEXT_PUBLIC_STRIPE_API_URI}${
               blogDetails.data.attributes.cover?.data?.attributes?.url || ""
@@ -31,6 +31,7 @@ export default async function BlogDetails({
             alt="blog cover"
             width={1032}
             height={617}
+            className="w-full"
           />
           <div className="flex flex-col xl:flex-row-reverse items-start justify-between gap-3">
             <div className="bg-[#CF2DB1] py-2 px-3 inline-flex items-center gap-2">
@@ -39,7 +40,7 @@ export default async function BlogDetails({
               </h1>
               <Star className="fill-white text-white size-4" />
             </div>
-            <div className="flex flex-col xl:flex-row gap-3">
+            {/* <div className="flex flex-col xl:flex-row gap-3">
               <div className="text-[#545454] inline-flex items-center gap-3">
                 <MapPinned className="size-6" />
                 <h3 className="text-base tracking-[0.02em]">
@@ -52,7 +53,7 @@ export default async function BlogDetails({
                   Japanese Izakaya
                 </h3>
               </div>
-            </div>
+            </div> */}
           </div>
           <div className="flex flex-col xl:flex-row gap-4 justify-between">
             <div className="flex items-center justify-center gap-2 bg-[linear-gradient(90deg,_#095143_0%,_#01745D_100%)] w-full xl:w-auto xl:px-6 rounded-lg">
@@ -85,13 +86,15 @@ export default async function BlogDetails({
               ),
             }}
           />
-          <div className="flex bg-[#FF89291A] rounded-md overflow-hidden">
-            <div className="w-4 bg-[#FF8929]"></div>
-            <div className="text-[#525252] text-xs xl:text-3xl tracking-[0.02em] py-3 px-5 xl:py-7 xl:px-14">
-              <span className="font-bold">Pro Tip:</span>{" "}
-              {blogDetails.data.attributes.tip}
+          {blogDetails.data.attributes.tip && (
+            <div className="flex bg-[#FF89291A] rounded-md overflow-hidden">
+              <div className="w-4 bg-[#FF8929]"></div>
+              <div className="text-[#525252] text-xs xl:text-3xl tracking-[0.02em] py-3 px-5 xl:py-7 xl:px-14">
+                <span className="font-bold">Pro Tip:</span>{" "}
+                {blogDetails.data.attributes.tip}
+              </div>
             </div>
-          </div>
+          )}
           <div className="shadow-[0px_0px_24px_0px_#CACACA40] p-5 flex flex-col gap-5">
             <h1 className="text-site-green text-base font-bold tracking-[0.01em] xl:text-3xl">
               Qulture Rating
@@ -179,7 +182,13 @@ export default async function BlogDetails({
           </div>
         </div>
         <div className="hidden xl:flex flex-col gap-9">
-          <Image src="/extra/ad.png" alt="ad" width={569} height={330} />
+          <Image
+            src="/extra/ad.png"
+            alt="ad"
+            width={569}
+            height={330}
+            className="w-full"
+          />
           <Trending title="Similar like this" />
         </div>
       </section>

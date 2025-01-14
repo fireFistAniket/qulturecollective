@@ -119,7 +119,7 @@ export default function TopBlogs() {
             className="flex flex-col xl:flex-row gap-7 xl:justify-between"
           >
             <div
-              className="flex flex-col gap-5 lg:max-w-3xl xxl:max-w-4xl w-full shrink-0"
+              className="flex flex-col gap-5 lg:max-w-3xl xxl:max-w-5xl w-full shrink-0"
               ref={blogListsRef}
             >
               {tab.value.map((tabDetail, id) => (
@@ -132,7 +132,7 @@ export default function TopBlogs() {
                 alt="ad"
                 width={569}
                 height={330}
-                className="w-[29.63vmax]"
+                className="w-full"
               />
               {trendingHeight > 0 && (
                 <Trending title="Trending" height={trendingHeight} />

@@ -5,18 +5,18 @@ type NavLinkType = {
 export const navlinks: NavLinkType[] = [
   {
     label: "Qulture Journeys",
-    href: "/",
+    href: "/popular/travel",
   },
   {
     label: "Qulture Eats",
-    href: "/training",
+    href: "/popular/food",
   },
   {
     label: "Qulture Insights",
-    href: "/more-view",
+    href: "/popular/insights",
   },
   {
     label: "Living the Qulture Way",
-    href: "#",
+    href: "/popular/others",
   },
 ];

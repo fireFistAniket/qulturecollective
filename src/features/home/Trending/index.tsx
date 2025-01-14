@@ -35,7 +35,7 @@ export default function Trending({
       <h1 className="text-2xl xl:text-left text-center text-site-green font-bold">
         {title}
       </h1>
-      <div className="flex flex-col gap-9 xl:px-7 shrink-0 ">
+      <div className="flex flex-col gap-9 xl:px-7 shrink">
         {trending.map((trend, index) => (
           <TrendingCard data={trend} key={index} />
         ))}
